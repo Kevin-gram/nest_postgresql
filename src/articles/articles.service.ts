@@ -10,7 +10,6 @@ export class ArticlesService {
   constructor(private prisma: PrismaService) {}
 
   findAll() {
-    return `This action returns all articles`;
     return this.prisma.article.findMany({ where: { published: true } });
   }
 }
